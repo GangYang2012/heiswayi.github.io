@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    {% unless post.next %}
+      <h2 class="year"><i class="fa fa-calendar"></i> {{ post.date | date: '%Y' }} &not;</h2>
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        <h2 class="year"><i class="fa fa-calendar"></i> {{ post.date | date: '%Y' }} &not;</h2>
+      {% endif %}
+    {% endunless %}
+
+    <div class="post-list">
+      <div class="post-list-date"><small>{{ post.date | date: "%b %d" }}</small></div>
+	    <div class="text-truncate"><a href="{{ post.url }}">{{ post.title }}</a></div>
+      <div class="post-list-desc">{{ post.description }}</div>
+    </div>
+
+  {% endfor %}
+</div>
+
+<hr/>

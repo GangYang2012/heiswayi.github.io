@@ -1,0 +1,57 @@
+# SEO settings
+title: "heiswayiNrird(site);"
+description: "Just another Software guy who loves PHP, C# and a cup of hot coffee..."
+keywords: "heiswayi nrird, php developer, c# developer, csharp developer, minimalist, software engineer, freelancer"
+url: "" # Site url (default: "")
+#baseurl: "" # Apply repo name if use it under gh-pages branch
+baseurl: null # Apply null if repo name is something like username.github.io
+
+# Site analytics
+google_analytics: UA-58296043-7
+
+# Site author info
+author:
+  name: "Heiswayi Nrird"
+  email: hnrird@gmail.com
+  nickname: "Wayi"
+  display_bio: true # Edit file in /_includes/bio.html
+  website: http://heiswayi.github.io
+
+# Social settings
+og_locale: "en_US"
+display_social_icons: true # Edit file in /_includes/social_links.html
+github:
+  username: heiswayi
+facebook:
+  profile_url: https://www.facebook.com/profile.php?id=1257583160
+twitter:
+  username: HeiswayiNrird
+
+# Build settings
+#source: ./
+#destination: ../heiswayi.github.io/
+source: ./
+destination: ./_site
+
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+timezone: Asia/Kuala_Lumpur
+
+exclude: ["README.md", "LICENSE.md", "CHANGELOG.md"]
+
+# Site configurations
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
