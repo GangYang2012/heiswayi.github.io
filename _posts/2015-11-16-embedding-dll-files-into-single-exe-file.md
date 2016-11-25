@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Embedding .DLL Files Into A Single .EXE File
-description: Unusual way to create a single binary .EXE file with embedded .DLL files in C#.
+title: Embedding .DLL files into a single .EXE file
+description: Some tricks to create a single binary .EXE file with embedded .DLL files using C# WinForms.
 keywords: embedded dll, visual studio
 ---
 
-This method is unusual and rarely people do it, but it still works for me when I want to hide one or two external library binaries like .DLL files into my single .EXE application file. I used to build most of my Windows application in C# language by using Visual Studio.
+This method is unusual and rarely people do it, but it still works for me when I want to hide one or two external library binaries like .DLL files into my single .EXE application file. I used to build most of my Windows application in .NET C# by using Visual Studio.
 
-Let's say I want to compile a simple application, for example a Mini Browser, and I have used these following five external .DLL files in my project:-
+Let's say I want to compile a simple application, for example a Mini Browser, and I have used these following 5 external .DLL files in my project:-
 
 - DevExpress.BonusSkins.v13.2.dll
 - DevExpress.Data.v13.2.dll
@@ -19,7 +19,7 @@ So, I put them in `lib` folder and include all of them in my project as shown in
 
 ![Include in Project Tree](http://i.imgur.com/n3QaSRh.png)
 
-This is my old project where I used C# WinForms to create a pretty simple Mini Browser application.
+This is my old project where I used **C# WinForms** to create a pretty simple Mini Browser application.
 
 Alright, after we included all of the files, we need to change **Build Action** of each file's Properties into `Embedded Resource` as shown in the picture below:
 
@@ -60,6 +60,6 @@ AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
 
 The above code requires `using System.Reflection;` namespace.
 
-That's it! When we build our application, on the output folder e.g. `bin`, we should have our single .EXE application file without the external .DLL files.
+That's it! When we build/compile our application, on the output folder (e.g. `bin`), we should have our single .EXE application file without any external assembly (.DLL) file.
 
-**WARNING:** Please note that, embedding .DLL files into our main application .EXE file will result the file size become bigger as it sum up all file size of each .DLL file.
+**Warning:** Please note that, embedding .DLL files into our main application .EXE file will result the our main application file size become bigger as it sum up all file size of each .DLL file.

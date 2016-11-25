@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Manually Install Apache, PHP, MySQL Server and Composer on Windows
-description: Tutorial on making your own fully functional WAMP server on Windows.
+description: Tutorial on making your own fully functional WAMP server on Windows without using any read-to-use package like WampServer, XAMPP and whatnots.
 keywords: manual install, apache, php, mysql, composer, wamp server
 ---
 
-Instead of using any ready-to-use packages like WampServer, XAMPP and whatnot, you can make your own fully functional WAMP server. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
+Instead of using any ready-to-use package like WampServer, XAMPP and whatnots, you can make your own fully functional WAMP server. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!
 
-## Apache
+### Apache
 
 First, you need to install Apache. It's recommended for you to read the [Platform Specific Notes](http://httpd.apache.org/docs/current/platform/windows.html) of Apache for Windows before you can proceed because it explains some Windows-specific features like running as a service that you don't have on other OSes and you probably never used before.
 
@@ -51,7 +51,7 @@ If it's currently still running, you need to terminate it first by pressing Ctrl
 
 Now you have a new service in Services (Windows+R, then type `services.msc` then press Enter) named as "Apache2.4". You can control just like other Windows services to start, stop or restart.
 
-## PHP
+### PHP
 
 Download the latest PHP binaries from the [official PHP for Windows download page](http://windows.php.net/download/), choose **Thread Safe** version that matches your Apache installation (x86 for 32-bit, x64 for 64-bit).
 
@@ -91,7 +91,7 @@ Now try to start Apache manually or restart the service, if you see no errors, i
 
 You can test your PHP installation by creating a file like `info.php` with `<?php phpinfo();` inside. Then browse to `http://localhost/info.php`, you should see quite a bit of info about your system and your PHP installation and all its modules.
 
-## MySQL
+### MySQL
 
 On the [MySQL Installer download page](http://dev.mysql.com/downloads/installer/), download the web installer version. Mine is [mysql-installer-web-community-5.6.27.0.msi](http://dev.mysql.com/downloads/file.php?id=459309) - it is the latest version as I'm writing this article.
 
@@ -133,7 +133,7 @@ $cfg['blowfish_secret'] = 'W4Y1'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 By default, nothing much need to configure since phpMyAdmin automatically detect the port used by MySQL Server. So, you can directly access `http://localhost/phpmyadmin` and login (username and password) as what you set during MySQL installation.
 
-## Composer (Optional)
+### Composer (Optional)
 
 Composer is a tool for dependency management in PHP, like a package manager. It allows to easily install PHP packages and even entire frameworks.
 
