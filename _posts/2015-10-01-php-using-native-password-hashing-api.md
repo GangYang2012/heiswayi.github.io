@@ -1,19 +1,19 @@
 ---
 layout: post
-title: PHP - Using Native Password Hashing API
-description: As of PHP 5.5, password hashing made easy!
-keywords: php 5.5, password hashing, native api
+title: PHP - Using native password hashing API
+description: As of PHP 5.5, password hashing in PHP app made easy as 4 new native functions have been introduced.
+keywords: php 5.5, password hashing, native api, php functions
 ---
 
 ## Introduction
 
-Password hashing is one of the most basic security considerations that must be made when designing any application that accepts passwords from users. Without hashing, any passwords that are stored in your application's database can be stolen if the database is compromised, and then immediately used to compromise not only your application, but also the accounts of your users on other services, if they do not use unique passwords.
+Password hashing is one of the most basic security considerations that must be made when designing any application that accepts passwords from users. Without hashing, any passwords that are stored in your application database can be stolen if the database is compromised, and then immediately used to compromise not only your application, but also the accounts of your users on other services, if they do not use unique passwords.
 
-This can be done by applying a hashing algorithm to your user's passwords before storing them in your database, so you make it implausible for any attacker to determine the original password. Hashing algorithms such as MD5, SHA1 and SHA256 are designed to be very fast and efficient. However, with modern techniques and computer equipment, it has become trivial to "brute force" the output of these algorithms in order to determine the original input. This is why `md5()` and `sha1()` are not suitable for password hashing functions.
+This can be done by applying a hashing algorithm to your user passwords before storing them in your database, so you make it implausible for any attacker to determine the original password. Hashing algorithms such as MD5, SHA1 and SHA256 are designed to be very fast and efficient. However, with modern techniques and computer equipment, it has become trivial to "brute force" the output of these algorithms in order to determine the original input. This is why `md5()` and `sha1()` are not suitable for password hashing functions.
 
 Luckily, as of PHP 5.5, a **native password hashing API** was introduced to safely handle both hashing and verifying passwords in a secure manner. When hashing passwords, the two most important considerations are the computational expense, and the salt. The more computationally expensive the hashing algorithm, the longer it will take to brute force its output. So, the suggested algorithm to use when hashing passwords is Blowfish, which is also the default used by this password hashing API.
 
-## The Implementation of API
+### The implementation of native password hashing API
 
 The implementation consists of 4 functions:-
 
@@ -22,11 +22,11 @@ The implementation consists of 4 functions:-
 * `password_needs_rehash()` : To check if a password meets the desired hash settings (algorithm, cost)
 * `password_get_info()` : To return information about the hash such as algorithm and cost
 
-> **password_hash()** creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
+**password_hash()** creates a new password hash using a strong one-way hashing algorithm and compatible with [**crypt()**](http://php.net/manual/en/function.crypt.php).
 
-## Usage Examples
+### Usage Examples
 
-### Example 1
+#### Example 1
 
 `password_hash()` example with **PASSWORD_DEFAULT**
 
@@ -49,7 +49,7 @@ Output:
 $2y$10$kZ8eWlGS30qABEthikt.uOvdYETzS3azGCutmfOdtXMzEvFuNoMWe
 ```
 
-### Example 2
+#### Example 2
 
 `password_hash()` example with setting **cost** manually
 
@@ -72,7 +72,7 @@ Output:
 $2y$12$gsF2.s.PkKLusBMsgHrQnOmB5mzG0bHGE97.SA5250aQ0ZTt0Klty
 ```
 
-> The role of the cost is to ensure that the passwords remain difficult to brute force even as hardware gets faster. You will need to continuously tweak your cost as your own hardware changes. However, if you are not careful and just crank it up to 11 (figuritively speaking) your passwords will take too long to generate, tying up web server threads and can easily lead to a DoS attack.
+The role of the cost is to ensure that the passwords remain difficult to brute force even as hardware gets faster. You will need to continuously tweak your cost as your own hardware changes. However, if you are not careful and just crank it up to 11 (figuritively speaking) your passwords will take too long to generate, tying up web server threads and can easily lead to a DoS attack.
 
 Here's the code to benchmark your server in order **to determine how high of a cost you can afford**:
 
@@ -101,7 +101,7 @@ Appropriate Cost Found: 10
 
 This is good if you want to set the highest cost that you can without slowing down your server too much. **8 - 10 is a good baseline**, and is good if your servers are fast enough. The code above aims for less than 50ms stretching time, which is a good baseline for systems handling interactive logins.
 
-### Example 3
+#### Example 3
 
 `password_hash()` example with setting **salt** manually
 
@@ -127,9 +127,9 @@ Output:
 $2y$11$dtSMAuO41g5QZcAG76FqTehpk35Dcf0lkEpBffEW7dRqQsrR2E8VO
 ```
 
-> **CAUTION:** It is strongly recommended that you do not generate your own salt for this function. It will create a secure salt automatically for you if you do not specify one.
+> **Caution:** It is strongly recommended that you do not generate your own salt for this function. It will create a secure salt automatically for you if you do not specify one.
 
-### Example 4
+#### Example 4
 
 `password_verify()` example
 
@@ -152,9 +152,9 @@ Output:
 Password is valid!
 ```
 
-> If you get incorrect false responses from **password_verify()** when manually including the hash variable (eg. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
+If you get incorrect false responses from **password_verify()** when manually including the hash variable (eg. for testing) and you know it should be correct, make sure you are enclosing the hash variable in single quotes (') and not double quotes (").
 
-### Example 5
+#### Example 5
 
 `password_needs_rehash()` example
 
@@ -181,7 +181,7 @@ if (password_verify($password, $hash)) {
 ?>
 ```
 
-### Example 6
+#### Example 6
 
 `password_get_info()` example
 
@@ -205,17 +205,17 @@ array (size=3)
       'cost' => int 11
 ```
 
-## Compatibility
+### Compatibility issue
 
 If you are not using PHP 5.5, there is a [pure PHP compatibility library](https://github.com/ircmaxell/password_compat) available for PHP 5.3.7 and later.
 
-## Salt
+### Salt
 
 A cryptographic salt is a data which is applied during the hashing process in order to eliminate the possibility of the output being looked up in a list of pre-calculated pairs of hashes and their input, known as a rainbow table.
 
 `password_hash()` will create a random salt if one is not provided, and this is generally the easiest and the most secure approach.
 
-## Storing the Salt
+#### Storing the Salt
 
 When using `password_hash()` or `crypt()`, the return value includes the salt as part of the generated hash. This value should be stored verbatim in your database, as it includes information about the hash function that was used and can then be given directly to `password_verify()` or `crypt()` when verifying passwords.
 
@@ -223,6 +223,6 @@ When using `password_hash()` or `crypt()`, the return value includes the salt as
 
 The diagram above shows the format of a return value from `crypt()` or `password_hash()`. As you can see, they are self-contained, with all the information on the algorithm and salt required for future password verification.
 
-## Conclusion
+### Conclusion
 
 With this new [password extension](http://php.net/password), the password hashing becomes more easier as we don't need to create our custom-made algorithm class or use any other external password hashing class library in our application anymore.

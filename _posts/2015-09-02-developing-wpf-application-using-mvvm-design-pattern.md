@@ -1,29 +1,21 @@
 ---
 layout: post
-title: Developing WPF Application Using MVVM Design Pattern
-description: An implementation example of MVVM design pattern in WPF application
+title: Developing WPF application using MVVM design pattern
+description: Basic tutorial on how you can start developing WPF application using Model-View-ViewModel design pattern.
 keywords: wpf application, mvvm design pattern, password hashing tool
 ---
 
 ![Password Hashing Tool](http://i.imgur.com/EQgW18i.png)
 
-In this post, I'll try my best to explain about an implementation of MVVM design pattern in a WPF application development. This tutorial is based on my sample WPF MVVM application project known as **Password Hashing Tool**. The full source code for the project can be downloaded [here](https://github.com/heiswayi/SimpleOneWayHashing). Let's begin!
+The screenshot above is a simple WPF application called **Password Hashing Tool**, created as an example app for this basic tutorial that implemented MVVM design pattern. The full source code for the project can be downloaded [here](https://github.com/heiswayi/SimpleOneWayHashing).
 
-**tl;dr**
+### What is WPF?
 
-### Let's start with an introduction to WPF
+WPF stands for **Windows Presentation Foundation**, a graphical subsystem for rendering UI in Windows-based applications by Microsoft for software development. It's now the current platform for developing Windows desktop applications. It's modern, advanced, hardware-accelerated framework for developing applications that maintains separation of concerns. WPF supports advanced rendering of 2D vector and 3D graphics, providing an immense range of capabilities for building rich, interactive and quality user interfaces.
 
-Talking about software and programming, in the year 2006, I started to learn and developed my first Windows-based application. At that time, I used **VB6** - the most used programming language on the planet and then Microsoft killed it. My interest to programming continued as I learned a new high-level programming language in the year 2009 for developing Windows-based applications which is called **C#**. During that time, most of my applications had been built with C# using **WinForms** - a graphical (GUI) class library to write rich client applications.
-
-However, as the technology started aging faster, the software requirements started to require more special features. At this time, WinForms wasn't able to catch up with the requirements due to its limitations in term of features and performance, unless it was just enough for simple, small and basic applications. So, in the last two years, I started using **Windows Presentation Foundation (WPF)** - a graphical subsystem for rendering UI in Windows-based applications by Microsoft for software development.
-
-Then I started to love WPF because it is now the current platform for developing Windows desktop applications. It's modern, advanced, hardware-accelerated framework for developing applications that maintain separation of concerns. It supports advanced rendering of 2D vector and 3D graphics, providing an immense range of capabilities for building rich, interactive and quality user interfaces.
-
-### Introduction to MVVM design pattern
+### MVVM design pattern
 
 The **Model View ViewModel (MVVM)** is an architectural pattern used in software development that originated from [Microsoft](https://msdn.microsoft.com/en-us/library/hh848246.aspx), which is from the WPF creator itself. It's a variation of [Martin Fowler's Presentation Model](http://www.martinfowler.com/eaaDev/PresentationModel.html) design pattern and it's based on a derivation of the [Model-View-Controller (MVC)](https://msdn.microsoft.com/en-us/library/ff649643.aspx) pattern.
-
-### WPF + XAML + MVVM
 
 MVVM facilitates a separation of the development of the GUI from the development of the business logic or back-end logic (the data model). It's targeted at modern UI development platforms (WPF and Silverlight) in which there is a UX developer who has different requirements than a more "traditional" developer. With MVVM, it allows you to keep your code clean and easy to maintain. MVVM is a way of creating client applications that leverages core features of the WPF platform while allows for simple unit testing of application functionality and helps developers and designers work together with less technical difficulties.
 
@@ -33,7 +25,7 @@ MVVM facilitates a separation of the development of the GUI from the development
 
 * **ViewModel** - A ViewModel is where the magic happens. This is where the majority of your code-behind goes such as data access, click events, complex calculations, business rules validation, etc. It's typically built to reflect the View. It's an abstraction of the View that exposes public properties and commands.
 
-### Why MVVM?
+#### Advantages of MVVM design pattern
 
 * **Collaboration** - Programmers and non-programmers (designers) can work together easily.
 * **Reliability** - The code is testable (unit testing) to maintain the consistency of code quality.
@@ -42,7 +34,7 @@ MVVM facilitates a separation of the development of the GUI from the development
 
 ### Let's have a look on "Password Hashing Tool" project
 
-OK, here's how the Tree View for directories and files looked like inside the project.
+Okay, here's how the Tree View for directories and files looked like inside the project.
 
 ```
 Solution 'SimpleOneWayHashing' (1 project)
@@ -73,9 +65,9 @@ Solution 'SimpleOneWayHashing' (1 project)
     └── ClassDiagram1.cd
 ```
 
->**NOTE:** I used Visual Studio 2013 to develop the "Password Hashing Tool" project but the solution and project files are named as `SimpleOneWayHashing`.
+>**Note:** I used Visual Studio 2013 to develop the "Password Hashing Tool" project but the solution and project files are named as `SimpleOneWayHashing`.
 
-As can be seen in the Tree View above, there are primary folders called **Models**, **ViewModels**, and **Views**. This is how we basically separate between the GUI and the logics. There are a lot of online resources for MVVM, each with their own way of implementing the design pattern. As the development grows, we will have more folders. This is to ensure our project looks organized and clean.
+As can be seen in the Tree View above, there are primary folders called **Models**, **ViewModels**, and **Views**. This is how we basically separate between the GUI and the logics. There are a lot of online resources for MVVM, each with their own way of implementing it. As the development grows, we will have more folders. This is to ensure our project is organized properly and clean.
 
 I created another folder called **Commands**. Inside this folder, there are some helper classes related to the use of `ICommand`. Let's skip this one first.
 
@@ -307,7 +299,7 @@ namespace SimpleOneWayHashing.ViewModels
 }
 ```
 
-`ViewModelBase.cs` and `HashingViewModel.cs` are using the same namespace `SimpleOneWayHashing.ViewModels`. As you can see from the source code above, there is a class called `HashingViewModel` which inherits from `ViewModelBase` class. Since they both are using the same namespace, so I don't need to include it via `using`, but not for the Model and `ICommand` interface helper class.
+`ViewModelBase.cs` and `HashingViewModel.cs` are using the same namespace `SimpleOneWayHashing.ViewModels`. As you can see from the source code above, there is a class called `HashingViewModel` which inherits from `ViewModelBase` class. Since they both are using the same namespace, so I don't need to include it with `using`, but not for the Model and `ICommand` interface helper class.
 
 The Model and `ICommand` interface helper class are using different classes and namespaces. So, I need to include them like this in `HashingViewModel.cs`:
 
@@ -351,7 +343,7 @@ namespace SimpleOneWayHashing.ViewModels
     |       └── HasherView.xaml.cs
 ```
 
-For this project, I just have one View file only `HasherView.xaml`. This is usually our **MainWindow.xaml**. OK, I don't use `DataTemplate` here. Here's how the XAML code looked like inside `HasherView.xaml`:
+For this project, I just have one View file only `HasherView.xaml`. This is usually our **MainWindow.xaml**. Okay, I don't use `DataTemplate` here. Here's how the XAML code looked like inside `HasherView.xaml`:
 
 ```xml
 <Window x:Class="SimpleOneWayHashing.Views.HasherView"
@@ -386,7 +378,7 @@ For this project, I just have one View file only `HasherView.xaml`. This is usua
 </Window>
 ```
 
-As can be seen there I used "Binding" to bind with the Model and ViewModel. Below is how the **untouched** code-behind of `HasherView.xaml.cs` looked like:
+As can be seen there I used "Binding" to bind it to ViewModel. Below is how the **untouched** code-behind of `HasherView.xaml.cs` looked like:
 
 ```csharp
 using System;
@@ -489,15 +481,15 @@ namespace SimpleOneWayHashing
 
 ### Conclusion
 
-Well, this is how "Password Hashing Tool" application has been developed with MVVM design pattern. This is one of the ways implementing MVVM design pattern in a project. Different people use different way implementing the MVVM design pattern. If you _google_ around, there are a lot of resources about the implementation of MVVM design pattern available online, from the basic or simpler version to the advanced, larga-scale development.
+Well, this is how "Password Hashing Tool" application has been developed with MVVM design pattern. This is one of the ways implementing MVVM design pattern in a project. Different developer might use different way of implementing the MVVM design pattern. If you _google_ around, there are a lot of resources about the implementation of MVVM design pattern available online, from the basic or simpler version to the advanced, large-scale development application.
 
-Don't forget to [download the source code](https://github.com/heiswayi/SimpleOneWayHashing/archive/master.zip) for this "Password Hashing Tool" project in my [GitHub repo](https://github.com/heiswayi/SimpleOneWayHashing) first and try to go through the code. It's much easier for you to understand how it works. I think the source code are explainable enough. If you want to implement MVVM in your project, you may use this project as a starter or you may reuse some of the code inside as the code snippets.
+You may [download the source code](https://github.com/heiswayi/SimpleOneWayHashing/archive/master.zip) for this "Password Hashing Tool" project from my [GitHub repo](https://github.com/heiswayi/SimpleOneWayHashing) to have a look on the source code. It's much easier for you to understand how it works. I think the source code are explainable enough. If you want to implement MVVM in your first project, you may use this project source code as an example or you may reuse some of the code inside as the code snippets.
 
-You also can start developing your own MVVM application with [MVVM frameworks](https://catelproject.atlassian.net/wiki/display/CTL/MVVM+framework+comparison+sheet) that available online and free.
+You also can start developing your own MVVM application with some [MVVM frameworks](https://catelproject.atlassian.net/wiki/display/CTL/MVVM+framework+comparison+sheet) that are available online and free. Have fun developing!
 
 -----
 
-#### References
+**References:**
 
 * [Simple MVVM Pattern in WPF](http://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 * [MVVM in WPF](http://www.c-sharpcorner.com/uploadfile/nipuntomar/mvvm-in-wpf/)
