@@ -19,4 +19,4 @@ keywords: minimalist, jekyll theme, personal blog, white clean
 
 ---
 
-_2016-10-19: Update the theme to Version 2.0.
+_2016-10-19: Update the theme to Version 2.0._
