@@ -1,20 +1,23 @@
 ---
 layout: post
-title: My Own Substitution Cipher Program
-description: Making my own substitution cipher program with my own encoding method.
-keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program
+title: My own substitution cipher program
+description: Creating my own substitution cipher program in C# WPF using my own encoding method to encode the plaintext message into encrypted strings.
+keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program, c# wpf, encryption and decryption
 ---
 
-Sometimes, I like to send a secret message or text to some friends. As **just for fun**, I created my own cipher program in .NET C# called _Heiswayi Nrird Cipher Program_.
+In cryptography, a cipher is an algorithm for performing encryption or decryption of information into some kind of secret codes. For a substitution cipher, it's a method of encoding characters of plaintext into something called ciphertext. There are few popular cipher algorithms such as steganography, ROT13, Caesar shift cipher, Vigenere, etc. which I can use.
+There are also the modern unbreakable of encryption algorithms available such as Triple DES, RSA, Blowfish, Twofish, AES, etc.
 
-I know, there are a lot of ciphers that I can use such as steganography, ROT13, Caesar shift cipher, Vigenere and so forth. Yes I can use the modern unbreakable of encryption algorithms such as Triple DES, RSA, Blowfish, Twofish, AES, etc. if I want to, but to be epic, I decided to use a substitution method with my own designed keys and encoding method.
+But to be epic, I decided to use a substitution method with my own designed keys and encoding algorithm. So, I created my own cipher program in C# WPF known as _Heiswayi Nrird Cipher Program_. It's just for fun and educational purpose only, nothing more.
 
-Here is the screenshot of the program:
+### Screenshot
 
 ![Heiswayi Nrird Cipher Program](http://i.imgur.com/AbUYj16.png)
 
-[**Download (.exe)**](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0)
+### Download
 
-To use this program, [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642) is required to be installed first.
+[**Download HeiswayiNrirdCipherProgramV1.zip**](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) · 25.79 KB
 
-WARNING: This program is just for fun, not for serious business. This program is compiled without any secure obfuscation and highly vulnerable to reverse engineering.
+Prerequisite: [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
+
+**Note:** This program is compiled without any secure obfuscation and may highly vulnerable to reverse engineering. Please don't use this program any serious business.

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Understanding Multithreading vs Single Threading Programming
-description: Sample source code of Windows Console app demonstrating multithreading programming.
+title: Understanding multithreading vs single threading programming
+description: Check out the sample source code of Windows Console app in C# demonstrating multithreading programming.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 ---
 
 Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but are able to execute independently while the single threading is the processing of one command at a time.
 
-The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is commonplace nowadays), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
+The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is common nowadays), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-As for example, below is the sample source code of Windows Console application in C# that will demonstrate multithreading programming vs single threading programming.
+For example, check out the sample source code below written for Windows Console app in C# that will demonstrate multithreading programming vs single threading programming. You may copy-and-paste the source code into your IDE (eg. Visual Studio) to have a try.
 
 ```csharp
 using System;
@@ -285,9 +285,13 @@ namespace MultithreadingVsSingleThreading
 }
 ```
 
-Screenshot of the application:
+### Screenshot
 
 ![Multithreading vs Single Threading Example](http://i.imgur.com/YsFg92A.png)
+
+_Figure 1 (above): A Windows Console app demonstrating multithreading vs single threading programming._
+
+### Footnotes
 
 The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
 

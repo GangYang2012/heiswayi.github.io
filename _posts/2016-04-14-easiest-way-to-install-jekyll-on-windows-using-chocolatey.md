@@ -1,39 +1,33 @@
 ---
 layout: post
-title: Easiest Way to Install Jekyll on Windows using Chocolatey
-description: Chocolatey is the BEST way to install and keep applications updated on Windows.
-keywords: jekyll installation, windows os, chocolatey
+title: Easiest Way to install Jekyll on Windows using Chocolatey
+description: Installing Jekyll on Windows from Command Prompt with Chocolatey is very simple way to do and faster.
+keywords: jekyll installation, windows os, chocolatey, command prompt
 ---
 
-Have you heard about Chocolatey? Chocolatey is the BEST way to install and keep applications updated on Windows. Let's not waste the time, here are the steps.
+[Chocolatey](https://chocolatey.org/) is a package manager for Windows, takes advantage of PowerShell to provide automated software management instructions and Chocolatey's built-in module to run complex tasks into one line function calls.
 
-**STEP01.** Open a command prompt with Administrator access
+### Install Jekyll on Windows using Chocolatey
 
-**STEP02.** Paste this to install [Chocolatey](https://chocolatey.org/):
+First, you need to install Chocolatey and the easy way to do is from your command prompt. Just copy-and-paste this script into your command prompt (run with Administrator access) and hit Enter:
 
 ```
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 ```
 
-**STEP03.** Close the command prompt as Chocolatey will not be available until we close and reopen.
-
-**STEP04.** Open a command prompt again with Administrator access
-
-**STEP05.** Paste this to install [Ruby](https://chocolatey.org/packages/ruby):
+After finished with Chocolatey installation, close the command prompt and re-open it (run with Administrator access) to start installing [Ruby](https://chocolatey.org/packages/ruby) using `choco install` command:
 
 ```
 choco install ruby -y
 ```
 
-**STEP06.** Close and reopen a new command prompt again with Administrator access
-
-**STEP07.** Paste this to install [Jekyll](https://jekyllrb.com/):
+After finished with Ruby installation, now is the time to install [Jekyll](https://jekyllrb.com/), the same way to install Ruby, close and re-open the command prompt (run with Administrator access), but using `gem install` command like this:
 
 ```
 gem install jekyll
 ```
 
-**STEP08.** Done! Now we can use standard Jekyll commands to create a new site and serve it:
+Finished! Now, we can use standard Jekyll commands to create a new site and serve it with such commands below:
 
 ```
 jekyll new myblog
@@ -41,4 +35,8 @@ cd myblog
 jekyll serve
 ```
 
-Credit: [David Burela](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/)
+Credit to [David Burela](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) for this tips.
+
+Additionally, I have installed another program in my Windows PC known as [FileMenu Tools](https://www.lopesoft.com/index.php/en/download/filemenu-tools). It's a context-menu program where I can easily run the command prompt at the current opened folder (or any folder) just by right-click on it and select "Command Line From Here". It has many more useful utilities, but opening the command prompt is the one I use the most.
+
+Happy Jekyll-ing and good luck!
