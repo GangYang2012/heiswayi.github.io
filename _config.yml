@@ -2,7 +2,7 @@
 title: "heiswayiNrird(site);"
 description: "Just another Software guy who loves PHP, C# and a cup of hot coffee..."
 keywords: "heiswayi nrird, php developer, c# developer, csharp developer, minimalist, software engineer, freelancer"
-url: "" # Site url (default: "")
+url: "https://heiswayi.github.io" # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
 baseurl: null # Apply null if repo name is something like username.github.io
 
