@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: Little information about the person behind this site.
-keywords: null
+keywords: about page
 ---
 
 I'm Heiswayi Nrird, or in short is **wayi**. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. For more detailed look at my professional skills and experiences can be found on my [LinkedIn](https://my.linkedin.com/in/nrird) or [my online resume](http://heiswayi.github.io/resume).
