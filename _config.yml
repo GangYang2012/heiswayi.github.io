@@ -33,7 +33,7 @@ twitter:
 source: ./
 destination: ./_site
 
-permalink: /:year/:title/
+permalink: /:year/:title
 markdown: kramdown
 highlighter: rouge
 
