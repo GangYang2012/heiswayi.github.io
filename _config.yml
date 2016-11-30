@@ -55,3 +55,6 @@ compress_html:
 sass:
   sass_dir: assets/scss
   style: compressed # expanded
+
+gems:
+  - jekyll-sitemap
