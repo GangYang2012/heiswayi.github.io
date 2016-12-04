@@ -1,20 +1,20 @@
 # Version 3.1
 
-### About this Jekyll theme
+## About this Jekyll theme
 
 This repo contains the source code of my site (referred to SITE_URL), which is built from scratch with [Jekyll](http://jekyllrb.com/) and generously hosted automatically on GitHub with free (Thanks, GitHub Pages!). This Jekyll theme is using [Font Awesome](https://fortawesome.github.io/Font-Awesome/) for the awesome icons and [Fira](https://github.com/mozilla/Fira) fonts by Mozilla for the awesome typeface.
 
-### Live
+## Live
 
 **SITE_URL:** [http://heiswayi.github.io](http://heiswayi.github.io)
 
-### License
+## License
 
 All blog posts under `_post/` folder or any photograph under `assets` folder may subjected to the copyright of Heiswayi Nrird (me). You may not reuse anything therein without _explicit permission_.
 
 **Everything else is [MIT licensed](LICENSE.md), unless otherwise stated.**
 
-### Changelogs
+## Changelogs
 
 ```
 Version 3.1
