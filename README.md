@@ -10,9 +10,7 @@ This repo contains the source code of my site (referred to SITE_URL), which is b
 
 ## License
 
-All blog posts under `_post/` folder or any photograph under `assets` folder may subjected to the copyright of Heiswayi Nrird (me). You may not reuse anything therein without _explicit permission_.
-
-**Everything else is [MIT licensed](LICENSE.md), unless otherwise stated.**
+Unless otherwise stated, all original code presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any of this material for commercial purposes, please write me an email at hnrird(at)gmail.com.
 
 ## Changelogs
 
