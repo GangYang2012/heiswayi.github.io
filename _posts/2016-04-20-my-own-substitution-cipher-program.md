@@ -3,6 +3,7 @@ layout: post
 title: My own substitution cipher program
 description: Creating my own substitution cipher program in C# WPF using my own encoding method to encode the plaintext message into encrypted strings.
 keywords: substitution cipher, custom encoding method, heiswayi nrird cipher program, c# wpf, encryption and decryption
+tags: [CSharp, WPF, Cryptography]
 ---
 
 In cryptography, a cipher is an algorithm for performing encryption or decryption of information into some kind of secret codes. For a substitution cipher, it's a method of encoding characters of plaintext into something called ciphertext. There are few popular cipher algorithms such as steganography, ROT13, Caesar shift cipher, Vigenere, etc. which I can use.

@@ -3,6 +3,7 @@ layout: post
 title: Easiest Way to install Jekyll on Windows using Chocolatey
 description: Installing Jekyll on Windows from Command Prompt with Chocolatey is very simple way to do and faster.
 keywords: jekyll installation, windows os, chocolatey, command prompt
+tags: [Jekyll, Chocolatey]
 ---
 
 [Chocolatey](https://chocolatey.org/) is a package manager for Windows, takes advantage of PowerShell to provide automated software management instructions and Chocolatey's built-in module to run complex tasks into one line function calls.

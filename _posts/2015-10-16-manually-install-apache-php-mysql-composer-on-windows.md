@@ -3,6 +3,7 @@ layout: post
 title: Manually Install Apache, PHP, MySQL Server and Composer on Windows
 description: Tutorial on making your own fully functional WAMP server on Windows without using any read-to-use package like WampServer, XAMPP and whatnots.
 keywords: manual install, apache, php, mysql, composer, wamp server
+tags: [PHP, Composer, MySQL, Apache]
 ---
 
 Instead of using any ready-to-use package like WampServer, XAMPP and whatnots, you can make your own fully functional WAMP server. So, this tutorial is about **how you can manually install Apache, PHP, MySQL server and Composer on your Windows PC**. As for your information, when writing this I'm currently using **Windows 10 Pro 64-bit**. So, this tutorial is based on it. Let's start!

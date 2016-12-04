@@ -3,6 +3,7 @@ layout: post
 title: Experiment with AI chatbot app development
 description: Developing artificial intelligence program always be an interesting thing to do. AI chatbot is one of fun stuffs to experiment with.
 keywords: artificial intelligence, chatbot, chatter bot, aiml, siml, elizabot.js
+tags: [Artificial Intelligence, Chatbot]
 ---
 
 ### AI chatbot using mIRC script

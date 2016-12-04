@@ -3,6 +3,7 @@ layout: post
 title: Simple Exif Reader Program
 description: Simple Exif Reader program is a simple tool built in C# WPF to extract EXIF data from an image file for photography info purpose.
 keywords: exif reader, exif data, extract metadata, histogram analysis, c# wpf
+tags: [EXIF, CSharp, WPF]
 ---
 
 ### What is EXIF data?

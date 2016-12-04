@@ -3,6 +3,7 @@ layout: post
 title: GitHub - Delete commits history with git commands
 description: Git commands to clear all the messy, ugly commits history in a GitHub repository.
 keywords: git commands, delete commits history, clear repository commits, reset repository
+tags: [GitHub]
 ---
 
 Here are the git commands to clear or clean up the messy, ugly commits history in a GitHub repository. This is like a repository reset. There are 2 methods we can use.

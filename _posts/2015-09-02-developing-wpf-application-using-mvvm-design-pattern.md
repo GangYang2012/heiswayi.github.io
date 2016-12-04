@@ -3,6 +3,7 @@ layout: post
 title: Developing WPF application using MVVM design pattern
 description: Basic tutorial on how you can start developing WPF application using Model-View-ViewModel design pattern.
 keywords: wpf application, mvvm design pattern, password hashing tool
+tags: [MVVM, WPF, CSharp]
 ---
 
 ![Password Hashing Tool](http://i.imgur.com/EQgW18i.png)

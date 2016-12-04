@@ -3,6 +3,7 @@ layout: post
 title: C# Common Practices
 description: Here are some sort of C# common coding practices I have been using in my coding style at work.
 keywords: csharp common practices, self-documented code, code optimization, good coding practices
+tags: [CSharp, Best Practices]
 ---
 
 There are a lot of articles about C# good common practices available online, some may written in any programming book. Just _google_ it, the magic is there! Previously, I don't really care about the good common practices in my C# programming, as long as my application works. Just a couple of years ago I started working in team of developers, in big software company, then the coding standards have been practiced widely among software developers.

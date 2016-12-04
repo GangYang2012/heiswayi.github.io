@@ -3,6 +3,7 @@ layout: post
 title: Creating SolidWorks Add-in simple installer with WinRAR
 description: One of the simple options and cheap to create a setup package (package installer) is by using using WinRAR SFX and Windows batch scripting.
 keywords: solidworks addin, simple installer, winrar sfx
+tags: [SolidWorks]
 ---
 
 When I was working as Application Engineer for one of the top SolidWorks Reseller local companies, I was assigned to develop a company's first SolidWorks Add-in. To make the installation process of the add-in assembly (DLL) as simple as possible, I opted to use WinRAR SFX and batch scripting to automate the assembly registration into Microsoft .NET Framework.

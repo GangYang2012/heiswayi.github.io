@@ -3,6 +3,7 @@ layout: post
 title: Understanding multithreading vs single threading programming
 description: Check out the sample source code of Windows Console app in C# demonstrating multithreading programming.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
+tags: [CSharp, Multithreading]
 ---
 
 Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but are able to execute independently while the single threading is the processing of one command at a time.

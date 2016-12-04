@@ -3,6 +3,7 @@ layout: post
 title: Learn to use Lambda Expression in C#
 description: Lambda expression helps me to write coding faster and shorter in C#. Let's learn how we can use lambda expressions, delegates, predicates and closures.
 keywords: lambda expressions, c# programming, anonymous functions, almbda operator, c# delegates, c# predicates, c# closures
+tags: [Lambda Expression, CSharp]
 ---
 
 ### Lambda expression

@@ -3,6 +3,7 @@ layout: post
 title: PHP - Encryption, Decryption And Password Hashing
 description: Here's how you should encrypt/decrypt data in PHP and also secure implementation of password hashing using PHP custom function.
 keywords: php encryption function, php decryption function, secure password hashing using php
+tags: [PHP, Encryption, Decryption, Hashing]
 ---
 
 Nowadays, people are browsing the web a lot. Some of them may be doing their business at risk when they are using a web application that is weakly built in protecting its user data or confidential information. It doesn't matter how simple or complicated, small or big the application is, when it involves keeping the user data, the developer needs to take care user information well and ensure their data are safe with our application. One way to do that is by encrypting the data before we save it.

@@ -3,6 +3,7 @@ layout: post
 title: Simple Pomodoro Technique Timer Application
 description: Simple Pomodoro Technique timer application is a very simple .NET application created in C# WPF as a tool to time management and productivity at office.
 keywords: pomodoro technique, time management, timer application, c# wpf
+tags: [Productivity, CSharp, WPF]
 ---
 
 Talking about Time Management at work, there is one of popular time management life hacks used today, it's known as [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique). It was created in the 1980s by Francesco Cirillo. The Pomodoro Technique is a time management philosophy that aims to provide the user with maximum focus and creative freshness, thereby allowing them to complete projects faster with less mental fatique.
