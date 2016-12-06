@@ -151,6 +151,8 @@ namespace XmlHelperConsoleApp
 
 #### Serialize object to XML string
 
+Let's see this example code for serializing the object to XML string:
+
 ```csharp
 using HeiswayiNrird.Utility.Common;
 using System;
@@ -216,7 +218,7 @@ The code above will output XML-formatted string like this:
 
 #### Deserialize XML string to object
 
-To get for specific value from the XML string, we need to deserialize it and retrieve our desired value like this:
+To get for specific value from the XML string, we need to deserialize it and retrieve our desired value like this example code:
 
 ```csharp
 using HeiswayiNrird.Utility.Common;
@@ -251,6 +253,8 @@ The code above will output something like this:
 John Cornor
 Jason Bourne
 ```
+
+Yep, as simple as that!
 
 ### Credits
 
