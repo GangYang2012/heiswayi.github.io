@@ -2,7 +2,7 @@
 layout: post
 title: Learn to use Lambda Expression in C#
 description: Lambda expression helps me to write coding faster and shorter in C#. Let's learn how we can use lambda expressions, delegates, predicates and closures.
-keywords: lambda expressions, c# programming, anonymous functions, almbda operator, c# delegates, c# predicates, c# closures
+keywords: lambda expressions, c# programming, anonymous functions, lambda operator, c# delegates, c# predicates, c# closures
 tags: [Lambda Expression, CSharp]
 ---
 
@@ -18,7 +18,7 @@ int numberSeven = getSeven();
 // Variable 'numberSeven' will now contain 7
 ```
 
-We also can pass parameters to the function by declairing them inside the parenthesis:
+We also can pass parameters to the function by declaring them inside the parenthesis:
 
 ```csharp
 Func<int, int, int> addXandY = (x, y) => x + y; // x + y is expression
