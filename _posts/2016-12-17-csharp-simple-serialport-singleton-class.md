@@ -6,7 +6,9 @@ keywords: c# programming, singleton design pattern, serial port, serial communic
 tags: [CSharp, SerialPort]
 ---
 
-This is my singleton class code snippet, called as `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class. I use this singleton class mostly in my small or simple C# projects for receiving data via serial communication. The source code is available on [my gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d) too!
+This is my singleton class code snippet, called as `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class. I created this singleton class for my own use in my small or simple C# projects for receiving data stream from a serial port, e.g. [Arduino](https://www.arduino.cc/) board.
+
+_The code snippet also available on [my gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d)._
 
 ### SerialPortManager.cs
 
@@ -240,7 +242,9 @@ namespace HeiswayiNrird.Singleton
 
 ### Usage examples
 
-To **retrieve the data**, just subscribe to `OnDataReceived` event like this:
+To **retrieve the data**, just subscribe to `OnDataReceived` event.
+
+Example:
 
 ```csharp
 using HeiswayiNrird.Singleton;
@@ -272,7 +276,9 @@ namespace SerialPortSingleton
 }
 ```
 
-For something simple, you may use anonymous function like this, then directly update to UI:
+For something simpler, you may use anonymous function and update directly to UI.
+
+Example:
 
 ```csharp
 using HeiswayiNrird.Singleton;
@@ -312,7 +318,7 @@ namespace SerialPortSingleton
 }
 ```
 
-To **open/close the serial port connection**, you may just call `Open(params)` or `Close()` method.
+To **open/close the serial port connection**, you may just call `Open()` or `Close()` method.
 
 Example:
 
@@ -324,7 +330,7 @@ SerialPortManager.Instance.Open("COM4", 9600);
 SerialPortManager.Instance.Close();
 ```
 
-If you need to update any status message to UI for any status response from `SerialPortManager`, you may just subscribe to `OnStatusChanged` event. Or for simple way to know if the serial port is opened or closed, just subscribe to `OnSerialPortOpened` event.
+`SerialPortManager` also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to `OnStatusChanged` event or `OnSerialPortOpened` event for getting boolean return when the serial port is opened or closed.
 
 Example:
 
@@ -360,8 +366,8 @@ namespace SerialPortSingleton
 
 ### Avoiding app hang during serial port closing
 
-Don't worry, this class doesn't have the issue. Here is the design approach;
+Don't worry, this singleton class doesn't have the issue. Here is the design approach;
 
-As you can see from the class, there is no `SerialPort.Close()` is used as this will cause a deadlock issue or hang your GUI. This is because the serial port base stream is locked while serial port events are handled.
+As you can see from the class, there is no `SerialPort.Close()` (System.IO.Ports) is used as this will cause a deadlock issue or hang your application. This is because the serial port base stream is locked while serial port events are handled.
 
-`ReadPort()` method is run on a new thread and use `while` loop statement for acquiring/reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to FALSE which will stop UI from receiving data update while wait the thread terminates.
+Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring/reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to FALSE which will stop UI from receiving and updating data while waiting the thread terminates.
