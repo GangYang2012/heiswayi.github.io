@@ -2,14 +2,24 @@
 layout: page
 title: About
 description: Little information about the person behind this site.
-keywords: about page
+keywords: about page, about me
 ---
 
-I'm Heiswayi Nrird, or in short is **wayi**. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. For more detailed look at my professional skills and experiences can be found on my [LinkedIn](https://my.linkedin.com/in/nrird) or [my online resume](http://heiswayi.github.io/resume).
+Hi, I am Heiswayi Nrird, or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, MY. For more detailed look at my professional skills and experiences can be found on these following links:-
 
-This website/blog is a place I share my thoughts/opinions, some ideas, projects or findings. It's built with the excellent [Jekyll](http://jekyllrb.com) (the static site generator) and proudly hosted on [GitHub Pages](https://pages.github.com/) (it's free!). The layout of this site is hand-made by me. The source code is available on my GitHub repo [here](http://github.com/heiswayi/heiswayi.github.io).
+- my [LinkedIn](https://my.linkedin.com/in/nrird) profile
+- my online HTML [resume](http://heiswayi.github.io/resume) (print-friendly)
 
-For contact, you may write an email to me at **hnrird(at)gmail.com** or ping me on [Twitter](https://twitter.com/HeiswayiNrird).
+For contact, you may write an email to me at **hnrird(at)gmail.com**.
+
+#### Colophon
+
+This site or blog is a place I share my thoughts, opinions, reviews, some ideas, projects or findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and proudly hosted on [GitHub Pages](https://pages.github.com/) with free. The layout of this site is designed from scratch and hand-made by me with love. The typeface is powered by [Fira](https://github.com/mozilla/Fira) from Mozilla. The [source code](http://github.com/heiswayi/heiswayi.github.io) can be found on my [GitHub](http://github.com/heiswayi) repositories.
+
+Following links are the dedicated site for my repositories and gists listing:-
+
+- [heiswayi.github.repositories](http://heiswayi.github.io/my-repos/)
+- [heiswayi.github.gists](http://heiswayi.github.io/my-gists/)
 
 #### Blog Disclaimer
 
